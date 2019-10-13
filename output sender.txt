@@ -1,0 +1,123 @@
+python sender.py <w> <maxseq> <n> <I> <time> <ip> <port>
+
+python sender.py 6 8 19 4 2 192.168.2.5 20040
+
+#format of msg in output - <sent/lost> <seq num> ; "MESSAGE NUMBER " <pack num> ";" <checksum> 
+
+sent 0 ; MESSAGE NUMBER 1 ; ca68cce88929f21714ffd3955d2ef990    #sent msg
+sent 1 ; MESSAGE NUMBER 2 ; d5b1aa73ad05975dcd17fef7db3552c7
+sent 2 ; MESSAGE NUMBER 3 ; 9ea0db3c446dc0b6dd90e486b580bf7f
+- Lost 3 ; MESSAGE NUMBER 4 ; f73b95fb98a91a9c14af2957ff5a8391
+sent 4 ; MESSAGE NUMBER 5 ; 4e5058da11358f76789e5723adc57cec
+sent 5 ; MESSAGE NUMBER 6 ; 50b59702bfbeb0e3c668e7f96281274e
+return msg :  Ack-For-seq 0                                      # acknowledgment
+return msg :  Ack-For-seq 1
+return msg :  Ack-For-seq 2
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 3 ; MESSAGE NUMBER 4 ; f73b95fb98a91a9c14af2957ff5a8391
+- Lost 4 ; MESSAGE NUMBER 5 ; 4e5058da11358f76789e5723adc57cec
+sent 5 ; MESSAGE NUMBER 6 ; 50b59702bfbeb0e3c668e7f96281274e
+sent 6 ; MESSAGE NUMBER 7 ; c384aaa303204c6e28087fb6b286241a
+sent 7 ; MESSAGE NUMBER 8 ; 9f8f93d694317ba03848f4db11a94dea
+- Lost 8 ; MESSAGE NUMBER 9 ; 48589af496f4890eaf558ab6b629bcf4
+return msg :  Ack-For-seq 3
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 4 ; MESSAGE NUMBER 5 ; 4e5058da11358f76789e5723adc57cec
+sent 5 ; MESSAGE NUMBER 6 ; 50b59702bfbeb0e3c668e7f96281274e
+sent 6 ; MESSAGE NUMBER 7 ; c384aaa303204c6e28087fb6b286241a
+- Lost 7 ; MESSAGE NUMBER 8 ; 9f8f93d694317ba03848f4db11a94dea
+sent 8 ; MESSAGE NUMBER 9 ; 48589af496f4890eaf558ab6b629bcf4
+sent 0 ; MESSAGE NUMBER 10 ; d6949b0dc1c5a69ecc125e65b8844986
+return msg :  Ack-For-seq 4
+return msg :  Ack-For-seq 5
+return msg :  Ack-For-seq 6
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 7 ; MESSAGE NUMBER 8 ; 9f8f93d694317ba03848f4db11a94dea
+- Lost 8 ; MESSAGE NUMBER 9 ; 48589af496f4890eaf558ab6b629bcf4
+sent 0 ; MESSAGE NUMBER 10 ; d6949b0dc1c5a69ecc125e65b8844986
+sent 1 ; MESSAGE NUMBER 11 ; 53c8e3b4981485cb74fe9d7ce4445dd8
+sent 2 ; MESSAGE NUMBER 12 ; 1273de8bfb17f4ede5826ee6c2353abf
+- Lost 3 ; MESSAGE NUMBER 13 ; 099f615b4fd3ff1bed6450ddf7a10698
+return msg :  Ack-For-seq 7
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 8 ; MESSAGE NUMBER 9 ; 48589af496f4890eaf558ab6b629bcf4
+sent 0 ; MESSAGE NUMBER 10 ; d6949b0dc1c5a69ecc125e65b8844986
+sent 1 ; MESSAGE NUMBER 11 ; 53c8e3b4981485cb74fe9d7ce4445dd8
+- Lost 2 ; MESSAGE NUMBER 12 ; 1273de8bfb17f4ede5826ee6c2353abf
+sent 3 ; MESSAGE NUMBER 13 ; 099f615b4fd3ff1bed6450ddf7a10698
+sent 4 ; MESSAGE NUMBER 14 ; e6c6f8041a38d0162223b9dbd7dbf243
+return msg :  Ack-For-seq 8
+return msg :  Ack-For-seq 0
+return msg :  Ack-For-seq 1
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 2 ; MESSAGE NUMBER 12 ; 1273de8bfb17f4ede5826ee6c2353abf
+- Lost 3 ; MESSAGE NUMBER 13 ; 099f615b4fd3ff1bed6450ddf7a10698
+sent 4 ; MESSAGE NUMBER 14 ; e6c6f8041a38d0162223b9dbd7dbf243
+sent 5 ; MESSAGE NUMBER 15 ; f01ef9e97f30cca2c314e7d7c3cb4085
+sent 6 ; MESSAGE NUMBER 16 ; 0d894b5a6420ff41e430dae11f47214f
+- Lost 7 ; MESSAGE NUMBER 17 ; 98103e4099ad248e400abdcb42e25afc
+return msg :  Ack-For-seq 2
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 3 ; MESSAGE NUMBER 13 ; 099f615b4fd3ff1bed6450ddf7a10698
+sent 4 ; MESSAGE NUMBER 14 ; e6c6f8041a38d0162223b9dbd7dbf243
+sent 5 ; MESSAGE NUMBER 15 ; f01ef9e97f30cca2c314e7d7c3cb4085
+- Lost 6 ; MESSAGE NUMBER 16 ; 0d894b5a6420ff41e430dae11f47214f
+sent 7 ; MESSAGE NUMBER 17 ; 98103e4099ad248e400abdcb42e25afc
+sent 8 ; MESSAGE NUMBER 18 ; 4be51bdace1384dfd80a86aa83a02bd8
+return msg :  Ack-For-seq 3
+return msg :  Ack-For-seq 4
+return msg :  Ack-For-seq 5
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 6 ; MESSAGE NUMBER 16 ; 0d894b5a6420ff41e430dae11f47214f
+- Lost 7 ; MESSAGE NUMBER 17 ; 98103e4099ad248e400abdcb42e25afc
+sent 8 ; MESSAGE NUMBER 18 ; 4be51bdace1384dfd80a86aa83a02bd8
+sent 0 ; MESSAGE NUMBER 19 ; 478da077c45c67e76faaa6a3144398fe
+return msg :  Ack-For-seq 6
+return msg : Duplicate Ack Received
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 7 ; MESSAGE NUMBER 17 ; 98103e4099ad248e400abdcb42e25afc
+- Lost 8 ; MESSAGE NUMBER 18 ; 4be51bdace1384dfd80a86aa83a02bd8
+sent 0 ; MESSAGE NUMBER 19 ; 478da077c45c67e76faaa6a3144398fe
+return msg :  Ack-For-seq 7
+return msg : Duplicate Ack Received
+
+Resending packets
+
+sent 8 ; MESSAGE NUMBER 18 ; 4be51bdace1384dfd80a86aa83a02bd8
+sent 0 ; MESSAGE NUMBER 19 ; 478da077c45c67e76faaa6a3144398fe
+return msg :  Ack-For-seq 8
+return msg :  Ack-For-seq 0

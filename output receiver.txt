@@ -1,0 +1,200 @@
+python receiver.py <maxseq> <K> <Port>
+
+python receiver.py 8 6 20040
+
+ready:
+
+0 ; MESSAGE NUMBER 1 ; ca68cce88929f21714ffd3955d2ef990
+Packet 1 received, sending ack
+
+
+1 ; MESSAGE NUMBER 2 ; d5b1aa73ad05975dcd17fef7db3552c7
+Packet 2 received, sending ack
+
+
+2 ; MESSAGE NUMBER 3 ; 9ea0db3c446dc0b6dd90e486b580bf7f
+Packet 3 received, sending ack
+
+4 ; MESSAGE NUMBER 5 ; 4e5058da11358f76789e5723adc57cec
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 3 Expected
+
+Ack_For_Sequence-No_Up-To: 2 sent
+
+5 ; MESSAGE NUMBER 6 ; 50b59702bfbeb0e3c668e7f96281274e
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 3 Expected
+
+Ack_For_Sequence-No_Up-To: 2 sent
+
+
+3 ; MESSAGE NUMBER 4 ; f73b95fb98a91a9c14af2957ff5a8391
+Packet 4 received, sending ack
+
+5 ; MESSAGE NUMBER 6 ; 50b59702bfbeb0e3c668e7f96281274e
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 4 Expected
+
+Ack_For_Sequence-No_Up-To: 3 sent
+
+6 ; MESSAGE NUMBER 7 ; c384aaa303204c6e28087fb6b286241a
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 4 Expected
+
+Ack_For_Sequence-No_Up-To: 3 sent
+
+7 ; MESSAGE NUMBER 8 ; 9f8f93d694317ba03848f4db11a94dea
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 4 Expected
+
+Ack_For_Sequence-No_Up-To: 3 sent
+
+
+4 ; MESSAGE NUMBER 5 ; 4e5058da11358f76789e5723adc57cec
+Packet 5 received, sending ack
+
+
+5 ; MESSAGE NUMBER 6 ; 50b59702bfbeb0e3c668e7f96281274e
+Packet 6 received, sending ack
+
+
+6 ; MESSAGE NUMBER 7 ; c384aaa303204c6e28087fb6b286241a
+Packet 7 received, sending ack
+
+8 ; MESSAGE NUMBER 9 ; 48589af496f4890eaf558ab6b629bcf4
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 7 Expected
+
+Ack_For_Sequence-No_Up-To: 6 sent
+
+0 ; MESSAGE NUMBER 10 ; d6949b0dc1c5a69ecc125e65b8844986
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 7 Expected
+
+Ack_For_Sequence-No_Up-To: 6 sent
+
+
+7 ; MESSAGE NUMBER 8 ; 9f8f93d694317ba03848f4db11a94dea
+Packet 8 received, sending ack
+
+0 ; MESSAGE NUMBER 10 ; d6949b0dc1c5a69ecc125e65b8844986
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 8 Expected
+
+Ack_For_Sequence-No_Up-To: 7 sent
+
+1 ; MESSAGE NUMBER 11 ; 53c8e3b4981485cb74fe9d7ce4445dd8
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 8 Expected
+
+Ack_For_Sequence-No_Up-To: 7 sent
+
+2 ; MESSAGE NUMBER 12 ; 1273de8bfb17f4ede5826ee6c2353abf
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 8 Expected
+
+Ack_For_Sequence-No_Up-To: 7 sent
+
+
+8 ; MESSAGE NUMBER 9 ; 48589af496f4890eaf558ab6b629bcf4
+Packet 9 received, sending ack
+
+
+0 ; MESSAGE NUMBER 10 ; d6949b0dc1c5a69ecc125e65b8844986
+Packet 10 received, sending ack
+
+
+1 ; MESSAGE NUMBER 11 ; 53c8e3b4981485cb74fe9d7ce4445dd8
+Packet 11 received, sending ack
+
+3 ; MESSAGE NUMBER 13 ; 099f615b4fd3ff1bed6450ddf7a10698
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 2 Expected
+
+Ack_For_Sequence-No_Up-To: 1 sent
+
+4 ; MESSAGE NUMBER 14 ; e6c6f8041a38d0162223b9dbd7dbf243
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 2 Expected
+
+Ack_For_Sequence-No_Up-To: 1 sent
+
+
+2 ; MESSAGE NUMBER 12 ; 1273de8bfb17f4ede5826ee6c2353abf
+Packet 12 received, sending ack
+
+4 ; MESSAGE NUMBER 14 ; e6c6f8041a38d0162223b9dbd7dbf243
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 3 Expected
+
+Ack_For_Sequence-No_Up-To: 2 sent
+
+5 ; MESSAGE NUMBER 15 ; f01ef9e97f30cca2c314e7d7c3cb4085
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 3 Expected
+
+Ack_For_Sequence-No_Up-To: 2 sent
+
+6 ; MESSAGE NUMBER 16 ; 0d894b5a6420ff41e430dae11f47214f
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 3 Expected
+
+Ack_For_Sequence-No_Up-To: 2 sent
+
+
+3 ; MESSAGE NUMBER 13 ; 099f615b4fd3ff1bed6450ddf7a10698
+Packet 13 received, sending ack
+
+
+4 ; MESSAGE NUMBER 14 ; e6c6f8041a38d0162223b9dbd7dbf243
+Packet 14 received, sending ack
+
+
+5 ; MESSAGE NUMBER 15 ; f01ef9e97f30cca2c314e7d7c3cb4085
+Packet 15 received, sending ack
+
+7 ; MESSAGE NUMBER 17 ; 98103e4099ad248e400abdcb42e25afc
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 6 Expected
+
+Ack_For_Sequence-No_Up-To: 5 sent
+
+8 ; MESSAGE NUMBER 18 ; 4be51bdace1384dfd80a86aa83a02bd8
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 6 Expected
+
+Ack_For_Sequence-No_Up-To: 5 sent
+
+
+6 ; MESSAGE NUMBER 16 ; 0d894b5a6420ff41e430dae11f47214f
+Packet 16 received, sending ack
+
+8 ; MESSAGE NUMBER 18 ; 4be51bdace1384dfd80a86aa83a02bd8
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 7 Expected
+
+Ack_For_Sequence-No_Up-To: 6 sent
+
+0 ; MESSAGE NUMBER 19 ; 478da077c45c67e76faaa6a3144398fe
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 7 Expected
+
+Ack_For_Sequence-No_Up-To: 6 sent
+
+
+7 ; MESSAGE NUMBER 17 ; 98103e4099ad248e400abdcb42e25afc
+Packet 17 received, sending ack
+
+0 ; MESSAGE NUMBER 19 ; 478da077c45c67e76faaa6a3144398fe
+packet rejected, OUT OF ORDER
+Packet-of-Seq-Number 8 Expected
+
+Ack_For_Sequence-No_Up-To: 7 sent
+
+
+8 ; MESSAGE NUMBER 18 ; 4be51bdace1384dfd80a86aa83a02bd8
+Packet 18 received, sending ack
+
+
+0 ; MESSAGE NUMBER 19 ; 478da077c45c67e76faaa6a3144398fe
+Packet 19 received, sending ack
