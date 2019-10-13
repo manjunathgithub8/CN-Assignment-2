@@ -1,0 +1,37 @@
+github link: https://github.com/manjunathgithub8/CN-Assignment-2
+
+Instructions to run program:
+    -there are two programs 1)receiver.py   2)sender.py
+**imp -First, receiver.py should be compiled and after that sender.py
+    
+   -format :
+           -receiver.py - python receiver.py <maxseq> <K> <Port>
+                example   python receiver.py 8 6 20040
+            
+           -sender.py - python sender.py <w> <maxseq> <n> <I> <time> <ip> <port>
+               example  python sender.py 6 8 19 4 2 192.168.2.5 20040
+ 
+ note: i have implemented packet loss in sender side only , hence <I> is required to be sent in sender program only.
+
+ 
+Working: GBN protocol using Socket programming and msg receiving and sending
+
+
+Challenges Faced: -implementing timeout
+                  -keeping track for resending packets
+
+
+References:  
+          - Basic structure of GBN : Extended FSM diagram of GBN - Computer Networking: A Top, Down Approach, 6th edition, Jim Kurose, Keith Ross, Addison-Wesley
+          
+          - GBN working animation - 
+             https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/go-back-n-protocol/index.html 
+            
+          - socket recv timeout: https://stackoverflow.com/questions/2719017/how-to-set-timeout-on-pythons-socket-recv-method
+             
+          - sockect programming- lecture slide - 2019-H2-CN-L25-Socket-Prog
+
+
+Contribution : 1ks17cs040 ,1ks17cs028 - logic to implement GBN protocol, sockect timeout
+               1ks17cs039 - using a list to store sent msgs and pop if out of order.
+ 
