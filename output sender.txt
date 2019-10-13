@@ -13,7 +13,7 @@ sent 5 ; MESSAGE NUMBER 6 ; 50b59702bfbeb0e3c668e7f96281274e
 return msg :  Ack-For-seq 0                                      # right acknowledgment received,implies packect was sent in order
 return msg :  Ack-For-seq 1
 return msg :  Ack-For-seq 2
-return msg : Duplicate Ack Received            #acknowledgment of last received packet in order, implies packet was sent out of order 
+return msg : Duplicate Ack Received            #acknowledgment of last received packet in order,implies packet was sent out of order 
 return msg : Duplicate Ack Received
 
 Resending packets
